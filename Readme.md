@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build Packages
-      uses: kopp/build-aur-packages@v1
+      uses: The-PullRequest-Club/build-aur-packages@v1
       with:
         packages: >
           azure-cli
