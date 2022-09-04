@@ -5,7 +5,7 @@ repository in the workspace.
 From there, you can use them to install, upload, ...
 
 See
-[here for a real world example](https://github.com/kopp/aurci2).
+[here for a real world example](https://github.com/The-PullRequest-Club/aurBuilder).
 
 Usage:
 Use this in a job that allows to run dockers (e.g. linux machine) like this:

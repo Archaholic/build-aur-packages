@@ -24,7 +24,7 @@ fi
 sudo --user builder \
     aur sync \
     --noconfirm --noview \
-    --database aurci2 --root /home/builder/workspace \
+    --database TheRepoClub-v1 --root /home/builder/workspace \
     $packages_with_aur_dependencies
 
 # Move the local repository to the workspace.
@@ -36,9 +36,9 @@ then
     # make sure that the .db/.files files are in place
     # Note: Symlinks fail to upload, so copy those files
     cd $GITHUB_WORKSPACE
-    rm aurci2.db aurci2.files
-    cp aurci2.db.tar.gz aurci2.db
-    cp aurci2.files.tar.gz aurci2.files
+    rm TheRepoClub-v1.db TheRepoClub-v1.files
+    cp TheRepoClub-v1.db.tar.gz TheRepoClub-v1.db
+    cp TheRepoClub-v1.files.tar.gz TheRepoClub-v1.files
 else
     echo "No github workspace known (GITHUB_WORKSPACE is unset)."
 fi
