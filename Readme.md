@@ -5,7 +5,7 @@ repository in the workspace.
 From there, you can use them to install, upload, ...
 
 See
-[here for a real world example](https://github.com/The-PullRequest-Club/aurBuilder).
+[here for a real world example](https://github.com/Archaholic/aurBuilder).
 
 Usage:
 Use this in a job that allows to run dockers (e.g. linux machine) like this:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build Packages
-      uses: The-PullRequest-Club/build-aur-packages@v1
+      uses: Archaholic/build-aur-packages@v1
       with:
         packages: >
           azure-cli
