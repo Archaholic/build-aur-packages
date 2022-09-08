@@ -39,7 +39,7 @@ RUN \
     sudo pacman -U --noconfirm aurutils-*.pkg.tar.zst && \
     mkdir /home/builder/workspace && \
     cp /tmp/aurutils/aurutils-*.pkg.tar.zst /home/builder/workspace/ && \
-    repo-add /home/builder/workspace/therepoclub-git.db.tar.gz /home/builder/workspace/aurutils-*.pkg.tar.zst
+    repo-add /home/builder/workspace/linuxrepos-git.db.tar.gz /home/builder/workspace/aurutils-*.pkg.tar.zst
 
 USER root
 # Note: Github actions require the dockerfile to be run as root, so do not
@@ -49,7 +49,7 @@ USER root
 # Register the local repository with pacman.
 RUN \
     echo "# local repository (required by aur tools to be set up)" >> /etc/pacman.conf && \
-    echo "[therepoclub-git]" >> /etc/pacman.conf && \
+    echo "[linuxrepos-git]" >> /etc/pacman.conf && \
     echo "SigLevel = Optional TrustAll" >> /etc/pacman.conf && \
     echo "Server = file:///home/builder/workspace" >> /etc/pacman.conf
 
