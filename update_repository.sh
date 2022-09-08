@@ -24,7 +24,7 @@ fi
 sudo --user builder \
     aur sync \
     --noconfirm --noview \
-    --database therepoclub-git --root /home/builder/workspace \
+    --database linuxrepos-git --root /home/builder/workspace \
     $packages_with_aur_dependencies
 
 # Move the local repository to the workspace.
@@ -36,9 +36,9 @@ then
     # make sure that the .db/.files files are in place
     # Note: Symlinks fail to upload, so copy those files
     cd $GITHUB_WORKSPACE
-    rm therepoclub-git.db therepoclub-git.files
-    cp therepoclub-git.db.tar.gz therepoclub-git.db
-    cp therepoclub-git.files.tar.gz therepoclub-git.files
+    rm linuxrepos-git.db linuxrepos-git.files
+    cp linuxrepos-git.db.tar.gz linuxrepos-git.db
+    cp linuxrepos-git.files.tar.gz linuxrepos-git.files
 else
     echo "No github workspace known (GITHUB_WORKSPACE is unset)."
 fi
